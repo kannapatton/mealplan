@@ -102,8 +102,8 @@ app.get('/login', (req, res) =>{
       });
     });
 });
-app.delete('/delete/:id', (req, res) => {
-    const iddinner = req.params.id;
+app.delete('/delete/:iddinner', (req, res) => {
+    const iddinner = req.params.iddinner;
     db.query("DELETE FROM dinner WHERE iddinner = ?", iddinner, (err, result) => {
         if (err) {
             console.log (err);
